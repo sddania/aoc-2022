@@ -1,2 +1,2 @@
 # aoc-2022
-Advent of code 2022 https://adventofcode.com/
+Just my solution for Advent of Code 2022 to learn F#.
