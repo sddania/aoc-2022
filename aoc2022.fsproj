@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="asset\Calories" />
-        <Compile Include="Day01Part1.fs" />
+        <Content Include="asset\01\input" />
+        <Compile Include="src\01\Day01Part1.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
