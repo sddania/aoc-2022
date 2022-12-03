@@ -3,12 +3,10 @@ namespace Aoc2022
 open System.IO
 
 module Input =
-    let readAllLineAsync path =
+    let readAllLinesAsync path =
         async {
-            let! lines = File.ReadAllLinesAsync path |> Async.AwaitTask
-            lines
+            return! path |> File.ReadAllLinesAsync |> Async.AwaitTask
         }
-    
     let path01 =
         Path.Combine(__SOURCE_DIRECTORY__, "../asset/01/input")
     let testPath01 =
