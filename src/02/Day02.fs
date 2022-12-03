@@ -2,12 +2,11 @@ namespace Aoc2022
 
 open System
 open System.IO
-open System.Text.RegularExpressions
 open FSharp.Collections.ParallelSeq
 open Microsoft.FSharp.Collections
 open Microsoft.FSharp.Core
 
-module Day02Part1 =
+module Day02 =
     type Game =
         | Rock = 1
         | Paper = 2

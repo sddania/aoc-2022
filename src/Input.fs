@@ -16,4 +16,8 @@ module Input =
         Path.Combine(__SOURCE_DIRECTORY__, "../asset/02/input")
     let testPath02 =
         Path.Combine(__SOURCE_DIRECTORY__, "../asset/02/example")
-
+        
+    let path03 =
+        Path.Combine(__SOURCE_DIRECTORY__, "../asset/03/input")
+    let testPath03 =
+        Path.Combine(__SOURCE_DIRECTORY__, "../asset/03/example")
