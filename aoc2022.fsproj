@@ -9,9 +9,12 @@
     <ItemGroup>
         <Content Include="asset\01\input" />
         <Content Include="asset\01\example" />
-        <Compile Include="src\Utils.fs" />
+        <Content Include="asset\02\input" />
+        <Content Include="asset\02\example" />
+        <Compile Include="src\Input.fs" />
         <Compile Include="src\01\Day01Part1.fs" />
         <Compile Include="src\01\Day01Part2.fs" />
+        <Compile Include="src\02\Day02Part1.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 

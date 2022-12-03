@@ -1,7 +1,5 @@
 namespace Aoc2022
 
-open System.IO
-
 module Day01Part2 =
     let result path =
         path
