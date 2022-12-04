@@ -25,25 +25,26 @@ module Day04 =
 
         ((int limit1), (int limit2))
 
-    let getSeqFromFirstPartAndLimitsToSecond (section1: string, section2: string) =
+    let getRangesAndLimits (section1: string, section2: string) =
         (getSeqFromFirst section1, getLimitsToSecond section2),
         (getSeqFromFirst section2, getLimitsToSecond section1)
 
     let limitIsIntoRange (range: seq<int>, (limit1: int, limit2: int)) =
         (range |> Seq.contains limit1
         && range |> Seq.contains limit2)
-    let checkAllSectionIsIntoOtherSection funCheck (check1, check2) = 
-        funCheck check1 || funCheck check2
         
     let limitIsPartiallyIntoRange (range: seq<int>, (limit1: int, limit2: int)) =
         (range |> Seq.contains limit1
         || range |> Seq.contains limit2)
+    
+    let checkAllSectionIsIntoOtherSection funCheck (check1, check2) = 
+        funCheck check1 || funCheck check2
         
     let result path =
         path
         |> File.ReadAllLines
         |> Seq.map (splitStringWithChar ',')
-        |> Seq.map getSeqFromFirstPartAndLimitsToSecond
+        |> Seq.map getRangesAndLimits
         |> Seq.filter (checkAllSectionIsIntoOtherSection limitIsIntoRange)
         |> Seq.length
         
@@ -51,6 +52,6 @@ module Day04 =
         path
         |> File.ReadAllLines
         |> Seq.map (splitStringWithChar ',')
-        |> Seq.map getSeqFromFirstPartAndLimitsToSecond
+        |> Seq.map getRangesAndLimits
         |> Seq.filter (checkAllSectionIsIntoOtherSection limitIsPartiallyIntoRange) 
         |> Seq.length
