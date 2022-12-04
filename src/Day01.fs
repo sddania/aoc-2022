@@ -21,7 +21,14 @@ module Day01Part1 =
         |> splitRowsWhen isNotEmpty
         |> Seq.map convertAndSum
     
-    let result path =
+    let part1 path =
         path
         |> readFileSplitAndSum
         |> Seq.max
+        
+    let part2 path =
+        path
+        |> readFileSplitAndSum
+        |> Seq.sortByDescending id
+        |> Seq.take 3
+        |> Seq.sum
