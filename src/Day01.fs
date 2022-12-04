@@ -3,7 +3,7 @@ namespace Aoc2022
 open System
 open System.IO
 
-module Day01Part1 =
+module Day01 =
     let isNotEmpty row = row |> String.IsNullOrWhiteSpace |> not
     let convertAndSum r = r |> Seq.map int32 |> Seq.sum
     let rec splitRowsWhen cond s =
