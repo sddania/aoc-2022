@@ -15,11 +15,14 @@
         <Content Include="asset\03\example" />
         <Content Include="asset\04\example" />
         <Content Include="asset\04\input" />
+        <Content Include="asset\05\input" />
+        <Content Include="asset\05\example" />
         <Compile Include="src\Input.fs" />
         <Compile Include="src\Day01.fs" />
         <Compile Include="src\Day02.fs" />
         <Compile Include="src\Day03.fs" />
         <Compile Include="src\Day04.fs" />
+        <Compile Include="src\Day05.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
